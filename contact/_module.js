@@ -4195,7 +4195,7 @@ function create_fragment$6(ctx) {
 						"url": "",
 						"size": null
 					},
-					"title": "Prolan & Co"
+					"title": "Via Del Web"
 				},
 				site_nav: [
 					{
@@ -4209,7 +4209,7 @@ function create_fragment$6(ctx) {
 						}
 					},
 					{
-						"link": { "url": "/company", "label": "Company" }
+						"link": { "url": "/about", "label": "About" }
 					},
 					{
 						"link": { "url": "/contact", "label": "Contact" }
