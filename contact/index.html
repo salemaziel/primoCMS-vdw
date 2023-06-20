@@ -3,14 +3,20 @@
 
 <head>
     <meta name="generator" content="Primo" />
-    <!-- HEAD_svelte-1funr7q_START -->
+    <!-- HEAD_svelte-1gm3cch_START -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.skypack.dev/twind/shim"></script>
     <style>
         /* Reset & standardize default styles */
         @import url("https://unpkg.com/@primo-app/primo@1.3.64/reset.css") layer;
+        @import url("https://unpkg.com/tailwindcss@3.0.18/lib/index.js") layer;
 
-        /* Design tokens (apply to components) */
+
+        /* Design tokens (apply to components
+
+) */
         :root {
             /* Custom theme options */
             --color-accent: rebeccapurple;
@@ -57,11 +63,11 @@
         }
 
         .button {
-            color: #111;
+            color: #fff;
             font-size: 1rem;
             background: white;
             border-radius: 2rem;
-            padding: 18px 28px;
+            padding: 1rem 2rem;
             transition: var(--transition, 0.1s box-shadow);
             border: 0;
         }
@@ -143,7 +149,7 @@
             padding-top: 10rem;
             max-width: 800px;
         }
-    </style><!-- HEAD_svelte-1funr7q_END -->
+    </style><!-- HEAD_svelte-1gm3cch_END -->
     <style>
         .section-container.svelte-1j9a45u.svelte-1j9a45u {
             display: flex;
@@ -223,131 +229,105 @@
             top: 1rem
         }
 
-        .section-container.svelte-1fj2qjh.svelte-1fj2qjh {
-            display: grid;
-            gap: 2rem
-        }
-
-        @media(min-width: 800px) {
-            .section-container.svelte-1fj2qjh.svelte-1fj2qjh {
-                grid-template-columns: 3fr 2fr;
-                gap: 14rem
-            }
-        }
-
-        .content.svelte-1fj2qjh.svelte-1fj2qjh {
-            display: grid;
-            place-content: flex-start;
-            gap: 1rem
-        }
-
-        .content.svelte-1fj2qjh .body.svelte-1fj2qjh {
-            margin-bottom: .5rem
-        }
-
-        .content.svelte-1fj2qjh .social-links.svelte-1fj2qjh {
-            display: grid;
-            gap: 0.75rem
-        }
-
-        .content.svelte-1fj2qjh .social-links a.svelte-1fj2qjh {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem
-        }
-
-        .content.svelte-1fj2qjh .social-links a .icon.svelte-1fj2qjh {
-            font-size: 1.5rem;
-            color: var(--color-accent, rebeccapurple);
-            transition: var(--transition, 0.1s transform)
-        }
-
-        .content.svelte-1fj2qjh .social-links a:hover .icon.svelte-1fj2qjh {
-            transform: scale(1.1)
-        }
-
-        form.svelte-1fj2qjh.svelte-1fj2qjh {
-            display: grid;
-            gap: 1rem;
-            padding: 2rem;
-            border: 1px solid var(--border-color, #eee);
-            border-radius: var(--border-radius)
-        }
-
-        form.svelte-1fj2qjh label.svelte-1fj2qjh {
-            display: grid;
-            gap: 0.25rem
-        }
-
-        form.svelte-1fj2qjh label span.svelte-1fj2qjh {
-            font-size: 0.75rem;
-            font-weight: 500
-        }
-
-        form.svelte-1fj2qjh label input.svelte-1fj2qjh,
-        form.svelte-1fj2qjh label textarea.svelte-1fj2qjh {
-            font-size: 1rem;
-            padding: 0.5rem;
-            outline-color: transparent;
-            transition: var(--transition, 0.1s outline-color);
-            border: 1.5px solid var(--border-color, #eee);
-            border-radius: 4px;
-            height: 3rem
-        }
-
-        form.svelte-1fj2qjh label input.svelte-1fj2qjh:focus,
-        form.svelte-1fj2qjh label textarea.svelte-1fj2qjh:focus {
-            outline-color: var(--color-accent, rebeccapurple)
-        }
-
-        form.svelte-1fj2qjh .button.svelte-1fj2qjh {
-            margin-top: 1rem
-        }
-
-        .section-container.svelte-p3are6.svelte-p3are6 {
+        .section-container.svelte-1rdv8ek.svelte-1rdv8ek {
             max-width: 700px;
             width: 100%;
             margin: 0 auto;
             gap: 1rem
         }
 
-        .content.svelte-p3are6.svelte-p3are6 {
+        .content.svelte-1rdv8ek.svelte-1rdv8ek {
             display: grid;
             place-content: flex-start;
             gap: 1rem;
             padding: 2rem 2rem
         }
 
-        form.svelte-p3are6.svelte-p3are6 {
+        form.svelte-1rdv8ek.svelte-1rdv8ek {
             display: grid;
             gap: 2rem;
             padding: 2rem
         }
 
-        form.svelte-p3are6 label.svelte-p3are6 {
+        form.svelte-1rdv8ek label.svelte-1rdv8ek {
             display: grid;
             gap: 0.25rem
         }
 
-        form.svelte-p3are6 input.svelte-p3are6,
-        form.svelte-p3are6 textarea.svelte-p3are6 {
+        form.svelte-1rdv8ek input.svelte-1rdv8ek,
+        form.svelte-1rdv8ek textarea.svelte-1rdv8ek {
             width: 100%;
             padding: 0.75rem 0.75rem;
-            border-radius: 2px
+            border-radius: 8px
         }
 
-        form.svelte-p3are6 .label.svelte-p3are6 {
+        form.svelte-1rdv8ek .label.svelte-1rdv8ek {
             font-size: .85rem;
             margin-bottom: 0.25rem
         }
 
-        form.svelte-p3are6 .placeholder.svelte-p3are6 {
+        form.svelte-1rdv8ek .placeholder.svelte-1rdv8ek {
             font-size: 1rem;
             font-weight: 300
         }
 
-        form.svelte-p3are6 .button.svelte-p3are6 {
-            place-self: start
+        .section-container.svelte-fjx86h.svelte-fjx86h {
+            display: grid;
+            justify-content: center
+        }
+
+        .card.svelte-fjx86h.svelte-fjx86h {
+            max-width: 640px;
+            border: 1px solid var(--border-color, #eee);
+            border-radius: var(--border-radius);
+            padding: 3.5rem 2.75rem;
+            text-align: center;
+            display: grid;
+            place-items: center;
+            gap: 2rem
+        }
+
+        @media(min-width: 600px) {
+            .card.svelte-fjx86h.svelte-fjx86h {
+                padding: 4.5rem 7rem
+            }
+        }
+
+        .link.svelte-fjx86h.svelte-fjx86h {
+            font-weight: 500;
+            border-color: transparent;
+            transition: var(--transition, 0.1s border)
+        }
+
+        .link.svelte-fjx86h.svelte-fjx86h:hover {
+            border-color: initial
+        }
+
+        ul.svelte-fjx86h.svelte-fjx86h {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem
+        }
+
+        ul.svelte-fjx86h li.svelte-fjx86h {
+            color: white;
+            background: var(--color-accent, rebeccapurple);
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: 0.1s transform
+        }
+
+        ul.svelte-fjx86h li.svelte-fjx86h:hover {
+            transform: scale(1.1)
+        }
+
+        ul.svelte-fjx86h li a.svelte-fjx86h {
+            font-size: 1.5rem;
+            padding: 0.75rem
         }
 
         footer.svelte-1n8xi4a.svelte-1n8xi4a {
@@ -391,46 +371,40 @@
             </div>
         </header>
     </div>
-    <div class="section" id="section-9c65ef1c">
-        <section class="section-container svelte-1fj2qjh">
-            <div class="content svelte-1fj2qjh">
-                <h2 class="heading">Contact Us</h2>
-                <div class="body svelte-1fj2qjh"><!-- HTML_TAG_START -->Whether you have questions, feedback, or just want to say hello, we're always ready to hear from you. Please fill out the contact form, and we'll do our best to respond within 24-48 hours.<!-- HTML_TAG_END --></div>
-                <div class="social-links svelte-1fj2qjh"><a href="/" class="svelte-1fj2qjh"><span class="icon svelte-1fj2qjh"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="1em" height="1em" viewBox="0 0 24 24" class="iconify iconify--mdi"><!-- HTML_TAG_START -->
-                                <path fill="currentColor" d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5c.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34c-.46-1.16-1.11-1.47-1.11-1.47c-.91-.62.07-.6.07-.6c1 .07 1.53 1.03 1.53 1.03c.87 1.52 2.34 1.07 2.91.83c.09-.65.35-1.09.63-1.34c-2.22-.25-4.55-1.11-4.55-4.92c0-1.11.38-2 1.03-2.71c-.1-.25-.45-1.29.1-2.64c0 0 .84-.27 2.75 1.02c.79-.22 1.65-.33 2.5-.33c.85 0 1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02c.55 1.35.2 2.39.1 2.64c.65.71 1.03 1.6 1.03 2.71c0 3.82-2.34 4.66-4.57 4.91c.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z" /><!-- HTML_TAG_END -->
-                            </svg></span>
-                        Github
-                    </a><a href="/" class="svelte-1fj2qjh"><span class="icon svelte-1fj2qjh"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="1em" height="1em" viewBox="0 0 24 24" class="iconify iconify--mdi"><!-- HTML_TAG_START -->
-                                <path fill="currentColor" d="M12 2.04c-5.5 0-10 4.49-10 10.02c0 5 3.66 9.15 8.44 9.9v-7H7.9v-2.9h2.54V9.85c0-2.51 1.49-3.89 3.78-3.89c1.09 0 2.23.19 2.23.19v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.45 2.9h-2.33v7a10 10 0 0 0 8.44-9.9c0-5.53-4.5-10.02-10-10.02Z" /><!-- HTML_TAG_END -->
-                            </svg></span>
-                        Facebook
-                    </a></div>
+    <div class="section" id="section-65deab74">
+        <section class="section-container svelte-1rdv8ek">
+            <div class="content svelte-1rdv8ek"><!-- HTML_TAG_START -->
+                <p>Whether you have questions, feedback, or just want to say hello, we're always ready to hear from you. Please fill out the contact form, and we'll do our best to respond within 24-48 hours.</p><!-- HTML_TAG_END -->
             </div>
-            <form class="svelte-1fj2qjh"><label class="svelte-1fj2qjh"><span class="svelte-1fj2qjh">Name</span>
-                    <input type="text" placeholder="John Doe" class="svelte-1fj2qjh">
-                </label><label class="svelte-1fj2qjh"><span class="svelte-1fj2qjh">Email</span>
-                    <input type="email" placeholder="johndoe@johndoe.com" class="svelte-1fj2qjh">
+            <form class="svelte-1rdv8ek"><label class="svelte-1rdv8ek"><span class="label svelte-1rdv8ek">Name</span>
+                    <input class="placeholder svelte-1rdv8ek" type="text" placeholder="Voluptate aute nisi">
+                </label><label class="svelte-1rdv8ek"><span class="label svelte-1rdv8ek">Email</span>
+                    <input class="placeholder svelte-1rdv8ek" type="email" placeholder="Esse non sit">
+                </label><label class="svelte-1rdv8ek"><span class="label svelte-1rdv8ek">Subject</span>
+                    <input class="placeholder svelte-1rdv8ek" type="text" placeholder="Eu laborum ea">
+                </label><label class="svelte-1rdv8ek"><span class="label svelte-1rdv8ek">Message</span>
+                    <textarea class="placeholder svelte-1rdv8ek" type="textarea" placeholder="Cupidatat ea elit"></textarea>
                 </label>
-                <button class="button svelte-1fj2qjh" type="submit">Submit</button>
+                <button type="submit" class="py-4 px-4 bg-transparent border-2 border-white rounded-xl mx-auto w-full text-white hover:border-[#2579BC]">Submit</button>
             </form>
         </section>
     </div>
-    <div class="section" id="section-65deab74">
-        <section class="section-container svelte-p3are6">
-            <div class="content svelte-p3are6"><!-- HTML_TAG_START -->
-                <p>Let us know what you want and we'll get back to you at our earliest convenience, assuming we get back to you at all.</p><!-- HTML_TAG_END -->
+    <div class="section" id="section-7736cc0d">
+        <section class="section-container svelte-fjx86h">
+            <div class="card svelte-fjx86h">
+                <h2 class="heading svelte-fjx86h">Get in touch</h2>
+                <a class="link svelte-fjx86h" href="mailto:info@general.com">info@general.com</a>
+                <ul class="svelte-fjx86h">
+                    <li class="svelte-fjx86h"><a href="/" aria-label="Twitter" class="svelte-fjx86h"></a>
+                    </li>
+                    <li class="svelte-fjx86h"><a href="/" aria-label="cupidatat" class="svelte-fjx86h"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="1em" height="1em" viewBox="0 0 24 24" class="iconify iconify--mdi"><!-- HTML_TAG_START -->
+                                <path fill="currentColor" d="M12 2.04c-5.5 0-10 4.49-10 10.02c0 5 3.66 9.15 8.44 9.9v-7H7.9v-2.9h2.54V9.85c0-2.51 1.49-3.89 3.78-3.89c1.09 0 2.23.19 2.23.19v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.45 2.9h-2.33v7a10 10 0 0 0 8.44-9.9c0-5.53-4.5-10.02-10-10.02Z" /><!-- HTML_TAG_END -->
+                            </svg></a>
+                    </li>
+                    <li class="svelte-fjx86h"><a href="/" aria-label="Reddit" class="svelte-fjx86h"></a>
+                    </li>
+                </ul>
             </div>
-            <form class="svelte-p3are6"><label class="svelte-p3are6"><span class="label svelte-p3are6">Name</span>
-                    <input class="placeholder svelte-p3are6" type="text" placeholder="Voluptate aute nisi">
-                </label><label class="svelte-p3are6"><span class="label svelte-p3are6">Email</span>
-                    <input class="placeholder svelte-p3are6" type="email" placeholder="Esse non sit">
-                </label><label class="svelte-p3are6"><span class="label svelte-p3are6">Subject</span>
-                    <input class="placeholder svelte-p3are6" type="text" placeholder="Eu laborum ea">
-                </label><label class="svelte-p3are6"><span class="label svelte-p3are6">Message</span>
-                    <textarea class="placeholder svelte-p3are6" type="textarea" placeholder="Cupidatat ea elit"></textarea>
-                </label>
-                <button type="submit" class="button svelte-p3are6">Submit</button>
-            </form>
         </section>
     </div>
     <div class="section" id="section-4271d828">

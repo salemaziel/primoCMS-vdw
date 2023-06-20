@@ -998,6 +998,10 @@ class SvelteComponent {
 function create_fragment(ctx) {
 	let meta0;
 	let meta1;
+	let script0;
+	let script0_src_value;
+	let script1;
+	let script1_src_value;
 	let style;
 	let t;
 
@@ -1005,17 +1009,25 @@ function create_fragment(ctx) {
 		c() {
 			meta0 = element("meta");
 			meta1 = element("meta");
+			script0 = element("script");
+			script1 = element("script");
 			style = element("style");
-			t = text("/* Reset & standardize default styles */\n@import url(\"https://unpkg.com/@primo-app/primo@1.3.64/reset.css\") layer;\n\n/* Design tokens (apply to components) */\n:root {\n  /* Custom theme options */\n  --color-accent: rebeccapurple;\n\n  /* Base values */\n  --box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.2);\n  --border-radius: 8px;\n  --border-color: #cbcace;\n}\n\n/* Root element (use instead of `body`) */\n#page {\n  font-family: system-ui, sans-serif;\n  color: white;\n  line-height: 1.2;\n  font-size: 1.125rem;\n  background: black;\n}\n\n/* Elements */\n.section-container {\n  max-width: 1300px;\n  margin: 0 auto;\n  padding: 5rem 2rem;\n}\n\na.link {\n  line-height: 1.3;\n  font-weight: 400;\n  border-bottom: 2px solid;\n  transform: translateY(-2px); /* move link back into place */\n  transition: var(--transition, 0.1s border);\n}\n\na.link:hover {\n    border-color: transparent;\n  }\n\n.heading {\n  font-size: clamp(2rem,10vw, 3rem);\n  font-weight: 500;\n  line-height: 1.3;\n}\n\n.button {\n  color: #111;\n  font-size: 1rem;\n  background: white;\n  border-radius: 2rem;\n  padding: 18px 28px;\n  transition: var(--transition, 0.1s box-shadow);\n  border: 0;\n}\n\n/* reset */\n\n.button:hover {\n    box-shadow: 0 0 0 2px var(--color-accent, rebeccapurple);\n  }\n\n.button.is-inverted {\n    background: black;\n    color: white;\n  }\n\n/* Content Section */\n.content { \n  max-width: 1300px;\n  margin: 0 auto;\n  padding: 5rem 2rem;\n  line-height: 1.4;\n  font-size: 2rem;\n}\n.content > * {\n    max-width: 600px;\n  }\n.content p {\n    padding: 0.25rem 0;\n  }\n.content img {\n    width: 100%;\n    margin: 2rem 0;\n    box-shadow: var(--box-shadow);\n    border-radius: var(--border-radius);\n  }\n.content a.link {\n  }\n.content h1 {\n    font-size: 3.5rem;\n    font-weight: 500;\n    margin-bottom: 1rem;\n  }\n.content h2 {\n    font-size: 2.25rem;\n    font-weight: 600;\n    margin-bottom: 0.5rem;\n  }\n.content h3 {\n    font-size: 1.75rem;\n    font-weight: 600;\n    margin-bottom: 0.25rem;\n  }\n.content ul {\n    list-style: disc;\n    padding: 0.5rem 0;\n    padding-left: 1.25rem;\n  }\n.content ol {\n    list-style: decimal;\n    padding: 0.5rem 0;\n    padding-left: 1.25rem;\n  }\n.content blockquote {\n    padding: 2rem;\n    box-shadow: var(--box-shadow);\n    border-radius: var(--border-radius);\n  }\n.content h1 {\n    padding-top: 10rem;\n    max-width: 800px;\n  }");
+			t = text("/* Reset & standardize default styles */\n@import url(\"https://unpkg.com/@primo-app/primo@1.3.64/reset.css\") layer;\n@import url(\"https://unpkg.com/tailwindcss@3.0.18/lib/index.js\") layer;\n\n\n/* Design tokens (apply to components\n\n) */\n:root {\n  /* Custom theme options */\n  --color-accent: rebeccapurple;\n\n  /* Base values */\n  --box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.2);\n  --border-radius: 8px;\n  --border-color: #cbcace;\n}\n\n/* Root element (use instead of `body`) */\n#page {\n  font-family: system-ui, sans-serif;\n  color: white;\n  line-height: 1.2;\n  font-size: 1.125rem;\n  background: black;\n}\n\n/* Elements */\n.section-container {\n  max-width: 1300px;\n  margin: 0 auto;\n  padding: 5rem 2rem;\n}\n\na.link {\n  line-height: 1.3;\n  font-weight: 400;\n  border-bottom: 2px solid;\n  transform: translateY(-2px); /* move link back into place */\n  transition: var(--transition, 0.1s border);\n}\n\na.link:hover {\n    border-color: transparent;\n  }\n\n.heading {\n  font-size: clamp(2rem,10vw, 3rem);\n  font-weight: 500;\n  line-height: 1.3;\n}\n\n.button {\n  color: #fff;\n  font-size: 1rem;\n  background: white;\n  border-radius: 2rem;\n  padding: 1rem 2rem;\n  transition: var(--transition, 0.1s box-shadow);\n  border: 0;\n}\n\n/* reset */\n\n.button:hover {\n    box-shadow: 0 0 0 2px var(--color-accent, rebeccapurple);\n  }\n\n.button.is-inverted {\n    background: black;\n    color: white;\n  }\n\n/* Content Section */\n.content { \n  max-width: 1300px;\n  margin: 0 auto;\n  padding: 5rem 2rem;\n  line-height: 1.4;\n  font-size: 2rem;\n}\n.content > * {\n    max-width: 600px;\n  }\n.content p {\n    padding: 0.25rem 0;\n  }\n.content img {\n    width: 100%;\n    margin: 2rem 0;\n    box-shadow: var(--box-shadow);\n    border-radius: var(--border-radius);\n  }\n.content a.link {\n  }\n.content h1 {\n    font-size: 3.5rem;\n    font-weight: 500;\n    margin-bottom: 1rem;\n  }\n.content h2 {\n    font-size: 2.25rem;\n    font-weight: 600;\n    margin-bottom: 0.5rem;\n  }\n.content h3 {\n    font-size: 1.75rem;\n    font-weight: 600;\n    margin-bottom: 0.25rem;\n  }\n.content ul {\n    list-style: disc;\n    padding: 0.5rem 0;\n    padding-left: 1.25rem;\n  }\n.content ol {\n    list-style: decimal;\n    padding: 0.5rem 0;\n    padding-left: 1.25rem;\n  }\n.content blockquote {\n    padding: 2rem;\n    box-shadow: var(--box-shadow);\n    border-radius: var(--border-radius);\n  }\n.content h1 {\n    padding-top: 10rem;\n    max-width: 800px;\n  }");
 			this.h();
 		},
 		l(nodes) {
-			const head_nodes = head_selector('svelte-1funr7q', document.head);
+			const head_nodes = head_selector('svelte-1gm3cch', document.head);
 			meta0 = claim_element(head_nodes, "META", { name: true, content: true });
 			meta1 = claim_element(head_nodes, "META", { charset: true });
+			script0 = claim_element(head_nodes, "SCRIPT", { src: true });
+			var script0_nodes = children(script0);
+			script0_nodes.forEach(detach);
+			script1 = claim_element(head_nodes, "SCRIPT", { src: true });
+			var script1_nodes = children(script1);
+			script1_nodes.forEach(detach);
 			style = claim_element(head_nodes, "STYLE", {});
 			var style_nodes = children(style);
-			t = claim_text(style_nodes, "/* Reset & standardize default styles */\n@import url(\"https://unpkg.com/@primo-app/primo@1.3.64/reset.css\") layer;\n\n/* Design tokens (apply to components) */\n:root {\n  /* Custom theme options */\n  --color-accent: rebeccapurple;\n\n  /* Base values */\n  --box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.2);\n  --border-radius: 8px;\n  --border-color: #cbcace;\n}\n\n/* Root element (use instead of `body`) */\n#page {\n  font-family: system-ui, sans-serif;\n  color: white;\n  line-height: 1.2;\n  font-size: 1.125rem;\n  background: black;\n}\n\n/* Elements */\n.section-container {\n  max-width: 1300px;\n  margin: 0 auto;\n  padding: 5rem 2rem;\n}\n\na.link {\n  line-height: 1.3;\n  font-weight: 400;\n  border-bottom: 2px solid;\n  transform: translateY(-2px); /* move link back into place */\n  transition: var(--transition, 0.1s border);\n}\n\na.link:hover {\n    border-color: transparent;\n  }\n\n.heading {\n  font-size: clamp(2rem,10vw, 3rem);\n  font-weight: 500;\n  line-height: 1.3;\n}\n\n.button {\n  color: #111;\n  font-size: 1rem;\n  background: white;\n  border-radius: 2rem;\n  padding: 18px 28px;\n  transition: var(--transition, 0.1s box-shadow);\n  border: 0;\n}\n\n/* reset */\n\n.button:hover {\n    box-shadow: 0 0 0 2px var(--color-accent, rebeccapurple);\n  }\n\n.button.is-inverted {\n    background: black;\n    color: white;\n  }\n\n/* Content Section */\n.content { \n  max-width: 1300px;\n  margin: 0 auto;\n  padding: 5rem 2rem;\n  line-height: 1.4;\n  font-size: 2rem;\n}\n.content > * {\n    max-width: 600px;\n  }\n.content p {\n    padding: 0.25rem 0;\n  }\n.content img {\n    width: 100%;\n    margin: 2rem 0;\n    box-shadow: var(--box-shadow);\n    border-radius: var(--border-radius);\n  }\n.content a.link {\n  }\n.content h1 {\n    font-size: 3.5rem;\n    font-weight: 500;\n    margin-bottom: 1rem;\n  }\n.content h2 {\n    font-size: 2.25rem;\n    font-weight: 600;\n    margin-bottom: 0.5rem;\n  }\n.content h3 {\n    font-size: 1.75rem;\n    font-weight: 600;\n    margin-bottom: 0.25rem;\n  }\n.content ul {\n    list-style: disc;\n    padding: 0.5rem 0;\n    padding-left: 1.25rem;\n  }\n.content ol {\n    list-style: decimal;\n    padding: 0.5rem 0;\n    padding-left: 1.25rem;\n  }\n.content blockquote {\n    padding: 2rem;\n    box-shadow: var(--box-shadow);\n    border-radius: var(--border-radius);\n  }\n.content h1 {\n    padding-top: 10rem;\n    max-width: 800px;\n  }");
+			t = claim_text(style_nodes, "/* Reset & standardize default styles */\n@import url(\"https://unpkg.com/@primo-app/primo@1.3.64/reset.css\") layer;\n@import url(\"https://unpkg.com/tailwindcss@3.0.18/lib/index.js\") layer;\n\n\n/* Design tokens (apply to components\n\n) */\n:root {\n  /* Custom theme options */\n  --color-accent: rebeccapurple;\n\n  /* Base values */\n  --box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.2);\n  --border-radius: 8px;\n  --border-color: #cbcace;\n}\n\n/* Root element (use instead of `body`) */\n#page {\n  font-family: system-ui, sans-serif;\n  color: white;\n  line-height: 1.2;\n  font-size: 1.125rem;\n  background: black;\n}\n\n/* Elements */\n.section-container {\n  max-width: 1300px;\n  margin: 0 auto;\n  padding: 5rem 2rem;\n}\n\na.link {\n  line-height: 1.3;\n  font-weight: 400;\n  border-bottom: 2px solid;\n  transform: translateY(-2px); /* move link back into place */\n  transition: var(--transition, 0.1s border);\n}\n\na.link:hover {\n    border-color: transparent;\n  }\n\n.heading {\n  font-size: clamp(2rem,10vw, 3rem);\n  font-weight: 500;\n  line-height: 1.3;\n}\n\n.button {\n  color: #fff;\n  font-size: 1rem;\n  background: white;\n  border-radius: 2rem;\n  padding: 1rem 2rem;\n  transition: var(--transition, 0.1s box-shadow);\n  border: 0;\n}\n\n/* reset */\n\n.button:hover {\n    box-shadow: 0 0 0 2px var(--color-accent, rebeccapurple);\n  }\n\n.button.is-inverted {\n    background: black;\n    color: white;\n  }\n\n/* Content Section */\n.content { \n  max-width: 1300px;\n  margin: 0 auto;\n  padding: 5rem 2rem;\n  line-height: 1.4;\n  font-size: 2rem;\n}\n.content > * {\n    max-width: 600px;\n  }\n.content p {\n    padding: 0.25rem 0;\n  }\n.content img {\n    width: 100%;\n    margin: 2rem 0;\n    box-shadow: var(--box-shadow);\n    border-radius: var(--border-radius);\n  }\n.content a.link {\n  }\n.content h1 {\n    font-size: 3.5rem;\n    font-weight: 500;\n    margin-bottom: 1rem;\n  }\n.content h2 {\n    font-size: 2.25rem;\n    font-weight: 600;\n    margin-bottom: 0.5rem;\n  }\n.content h3 {\n    font-size: 1.75rem;\n    font-weight: 600;\n    margin-bottom: 0.25rem;\n  }\n.content ul {\n    list-style: disc;\n    padding: 0.5rem 0;\n    padding-left: 1.25rem;\n  }\n.content ol {\n    list-style: decimal;\n    padding: 0.5rem 0;\n    padding-left: 1.25rem;\n  }\n.content blockquote {\n    padding: 2rem;\n    box-shadow: var(--box-shadow);\n    border-radius: var(--border-radius);\n  }\n.content h1 {\n    padding-top: 10rem;\n    max-width: 800px;\n  }");
 			style_nodes.forEach(detach);
 			head_nodes.forEach(detach);
 			this.h();
@@ -1024,10 +1036,14 @@ function create_fragment(ctx) {
 			attr(meta0, "name", "viewport");
 			attr(meta0, "content", "width=device-width, initial-scale=1.0");
 			attr(meta1, "charset", "UTF-8");
+			if (!src_url_equal(script0.src, script0_src_value = "https://cdn.tailwindcss.com")) attr(script0, "src", script0_src_value);
+			if (!src_url_equal(script1.src, script1_src_value = "https://cdn.skypack.dev/twind/shim")) attr(script1, "src", script1_src_value);
 		},
 		m(target, anchor) {
 			append_hydration(document.head, meta0);
 			append_hydration(document.head, meta1);
+			append_hydration(document.head, script0);
+			append_hydration(document.head, script1);
 			append_hydration(document.head, style);
 			append_hydration(style, t);
 		},
@@ -1037,6 +1053,8 @@ function create_fragment(ctx) {
 		d(detaching) {
 			detach(meta0);
 			detach(meta1);
+			detach(script0);
+			detach(script1);
 			detach(style);
 		}
 	};
