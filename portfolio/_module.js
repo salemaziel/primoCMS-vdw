@@ -3012,7 +3012,7 @@ function create_each_block_1(ctx) {
 			this.h();
 		},
 		h() {
-			attr(a, "class", "link svelte-sip8mq");
+			attr(a, "class", "link svelte-1j9a45u");
 			attr(a, "href", a_href_value = /*link*/ ctx[6].url);
 		},
 		m(target, anchor) {
@@ -3150,9 +3150,9 @@ function create_if_block$1(ctx) {
 		h() {
 			attr(button, "id", "close");
 			attr(button, "aria-label", "Close Navigation");
-			attr(button, "class", "svelte-sip8mq");
+			attr(button, "class", "svelte-1j9a45u");
 			attr(nav, "id", "popup");
-			attr(nav, "class", "svelte-sip8mq");
+			attr(nav, "class", "svelte-1j9a45u");
 		},
 		m(target, anchor) {
 			insert_hydration(target, nav, anchor);
@@ -3380,15 +3380,15 @@ function create_fragment$2(ctx) {
 		},
 		h() {
 			attr(a0, "href", "/");
-			attr(a0, "class", "logo svelte-sip8mq");
-			attr(nav, "class", "svelte-sip8mq");
-			attr(div0, "class", "desktop-nav svelte-sip8mq");
+			attr(a0, "class", "logo svelte-1j9a45u");
+			attr(nav, "class", "svelte-1j9a45u");
+			attr(div0, "class", "desktop-nav svelte-1j9a45u");
 			attr(a1, "href", "/");
-			attr(a1, "class", "logo svelte-sip8mq");
+			attr(a1, "class", "logo svelte-1j9a45u");
 			attr(button, "id", "open");
 			attr(button, "aria-label", "Open mobile navigation");
-			attr(div1, "class", "mobile-nav svelte-sip8mq");
-			attr(header, "class", "section-container svelte-sip8mq");
+			attr(div1, "class", "mobile-nav svelte-1j9a45u");
+			attr(header, "class", "section-container svelte-1j9a45u");
 			attr(div2, "class", "section");
 			attr(div2, "id", "section-b2a7444e");
 		},
