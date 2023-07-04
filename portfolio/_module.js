@@ -4144,14 +4144,13 @@ function create_fragment$6(ctx) {
 				},
 				site_nav: [
 					{
-						"link": { "url": "/work", "label": "Portfolio" }
+						"link": {
+							"url": "/portfolio",
+							"label": "Portfolio"
+						}
 					},
 					{
-						"link": {
-							"url": "/services",
-							"label": "Services",
-							"active": false
-						}
+						"link": { "url": "/services", "label": "Services" }
 					},
 					{
 						"link": { "url": "/about", "label": "About" }

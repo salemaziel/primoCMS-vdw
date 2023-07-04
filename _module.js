@@ -3776,7 +3776,7 @@ function create_fragment$5(ctx) {
 		h() {
 			attr(div0, "class", "content svelte-10e1ceb");
 			attr(a, "href", a_href_value = /*link*/ ctx[0].url);
-			attr(a, "class", "button");
+			attr(a, "class", "button !text-black");
 			attr(section, "class", "section-container svelte-10e1ceb");
 			attr(div1, "class", "section");
 			attr(div1, "id", "section-a2e88415");
@@ -4363,14 +4363,13 @@ function create_fragment$9(ctx) {
 				},
 				site_nav: [
 					{
-						"link": { "url": "/work", "label": "Portfolio" }
+						"link": {
+							"url": "/portfolio",
+							"label": "Portfolio"
+						}
 					},
 					{
-						"link": {
-							"url": "/services",
-							"label": "Services",
-							"active": false
-						}
+						"link": { "url": "/services", "label": "Services" }
 					},
 					{
 						"link": { "url": "/about", "label": "About" }
@@ -4384,7 +4383,7 @@ function create_fragment$9(ctx) {
 
 	component_2 = new Component$3({
 			props: {
-				headline: "Empowering Small Businesses with Custom Website and Digital Solutions\n\n\n",
+				headline: "Empowering Small Businesses with Custom Website and Digital Solutions",
 				subheadline: ""
 			}
 		});
